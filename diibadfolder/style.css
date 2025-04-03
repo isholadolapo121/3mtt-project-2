@@ -1,62 +1,33 @@
+/* Reset default styles */
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .wrapper {
-width: 100%;
-}
-
-.img-diibad {
-display: none;
-}
-
-.img-diibad {
-    width: 100%
-}
-
-.img-diibad h2 {
-    padding: 30px 30px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-font-size: 50px;
-color: #111;
-line-height: 44px;
-}
-
-.img-diibad h2 p {
-    padding: 0px 30px 20px;
-    font-family: Arial;
-font-size: 16px;
-color: #111;
-line-height: 24px;
-}
-
-.img-diibad {
-    wdth: 100%;
-}
-
-@media only screen and (mn-width: 768px) (
-    .img-banner {
-        display: block;
-        width: 100%;
-        padding-bottom: 30px;
-)
-
-.wrapper {
-    width: 600%;
-    margin: 0 auto
-}
-
-.img-diibad {
-    padding: 20px 0px 0px;
-}
-
-.img-done {
-    padding: 20px 0px 0px;
-}
-
-.img-dtwo {
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
 }
 
+/* Common styling for all images and text */
+.img-diibad, .img-done, .img-dtwo {
+    width: 100%;
+    padding: 20px 0; /* Consistent padding for all */
+    display: none; /* Initially hidden */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+}
 
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .img-diibad, .img-done, .img-dtwo {
+        display: block; /* Make visible on larger screens */
+        padding: 30px; /* Adjust padding for larger screens */
+        font-size: 18px; /* Optional: slightly larger text for readability */
+        line-height: 28px; /* Optional: adjust line height */
+    }
+}
